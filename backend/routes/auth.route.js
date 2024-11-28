@@ -1,12 +1,13 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 const { check, validationResult } = require("express-validator");
 
 const router = express.Router();
 const User = require("../models/User.model"); // Add a User model
 
-const JWT_SECRET = "vermaji78"; // Change this to a secure key
+JWT_SECRET = process.env.JWT_SECRET; // Change this to a secure key
 
 // Register User
 router.post(

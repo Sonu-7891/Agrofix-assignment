@@ -8,7 +8,12 @@ dotenv.config();
 
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://agrofix-assignment.vercel.app/", // Replace with your Vercel frontend URL
+    credentials: true, // Allow cookies and headers
+  })
+);
 app.use(express.json());
 
 // Routes

@@ -20,9 +20,10 @@
 // module.exports = authMiddleware;
 
 const jwt = require("jsonwebtoken");
+require("dotenv").config()
 const User = require("../models/User.model");
 
-const JWT_SECRET = "vermaji78"; // Ensure you use the same secret key as in your auth route
+const JWT_SECRET = process.env.JWT_SECRET; // Ensure you use the same secret key as in your auth route
 
 // Middleware to verify token and user role
 const authMiddleware = (roles = []) => {
