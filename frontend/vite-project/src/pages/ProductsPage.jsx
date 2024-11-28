@@ -9,8 +9,9 @@ const ProductsPage = () => {
   useEffect(() => {
     const loadProducts = async () => {
       const data = await fetchProducts();
+      console.log(data)
       setProducts(data);
-    };
+    }
     loadProducts();
   }, []);
 

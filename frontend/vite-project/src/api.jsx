@@ -36,10 +36,6 @@ export const placeOrder = async (orderData) => {
     },
   };
 
-  const response = await axios.post(
-    `${API_BASE_URL}/api/orders`,
-    orderData,
-    config
-  );
+  const response = await axios.post(`${API_URL}/api/orders`, orderData, config);
   return response.data;
 };
