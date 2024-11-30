@@ -8,10 +8,7 @@ dotenv.config();
 
 
 const app = express();
-const allowedOrigins = [
-  "http://localhost:5173", // Add your local frontend origin
-  "https://agrofix-assignment.vercel.app", // Add your deployed frontend origin
-];
+
 app.use(cors());
 app.use(express.json());
 
